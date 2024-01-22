@@ -1,0 +1,39 @@
+[tool.poetry]
+name = "plex-letterboxd-sync"
+version = "0.1.0"
+description = ""
+authors = ["Alex Oladele <Oladelaa@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+loguru = "^0.7.2"
+python = "^3.11"
+plexapi = "^4.15.7" # https://pypi.org/project/PlexAPI/
+requests = "~=2.31"
+python-decouple = "~=3.8"
+
+[tool.poetry.group.test.dependencies]
+responses = "*"
+pytest = "^7.4.4"
+requests-mock = "*"
+types-requests = "*"
+typing-extensions = "*"
+
+
+[tool.poetry.group.dev.dependencies]
+mypy = "*"
+ruff = "^0.1.13"
+black = "^23.12.1"
+
+[tool.ruff]
+line-length = 120
+
+[tool.ruff.mccabe]
+max-complexity = 8
+
+[tool.black]
+line-length = 120
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
