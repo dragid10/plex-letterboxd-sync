@@ -10,6 +10,8 @@ Language: Python 3.11+
 
 ## Run Locally
 
+Run the following commands in your terminal! 
+
 ### Python
 
 Install `python 3.11` using one of the many installation methods:
@@ -29,15 +31,15 @@ Install `python 3.11` using one of the many installation methods:
 Clone the project
 
 ```bash
-git clone https://link-to-project
+git clone https://github.com/dragid10/plex-letterboxd-sync.git
 ```
 
 Go to the project directory
 ```bash
-cd my-project
+cd plex-letterboxd-sync
 ```
 
-Install the python dependency management tool: `poetry` 
+Install poetry (python dependency management tool)
 
 ```bash
 pip install --user poetry
@@ -47,6 +49,20 @@ Install dependencies
 
 ```bash
 poetry install
+```
+
+Copy the `.env-sample` file and rename it to `.env`, and fill in the values for each variable
+
+```ini
+# Plex variables
+PLEX_USERNAME=my_username
+PLEX_PASSWORD=my_password
+
+# leave blank if 2fa is not enabled for your plex account
+PLEX_2FA=6digitcode 
+
+# Letterboxd variables
+LETTERBOXD_USERNAME=my_other-username
 ```
 
 Start the server
