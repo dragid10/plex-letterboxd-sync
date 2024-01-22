@@ -53,13 +53,15 @@ poetry install
 
 Copy the `.env-sample` file and rename it to `.env`, and fill in the values for each variable
 
-```ini
+```dotenv
 # Plex variables
 PLEX_USERNAME=my_username
 PLEX_PASSWORD=my_password
 
 # leave blank if 2fa is not enabled for your plex account
-PLEX_2FA=6digitcode 
+PLEX_2FA=012345
+#or
+PLEX_2FA= # just blank
 
 # Letterboxd variables
 LETTERBOXD_USERNAME=my_other-username
