@@ -6,24 +6,25 @@ authors = ["Alex Oladele <Oladelaa@gmail.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
+flask = "*"
 loguru = "^0.7.2"
-python = "^3.11"
 plexapi = "^4.15.7" # https://pypi.org/project/PlexAPI/
-requests = "~=2.31"
+python = "^3.11"
 python-decouple = "~=3.8"
+requests = "~=2.31"
 
 [tool.poetry.group.test.dependencies]
-responses = "*"
 pytest = "^7.4.4"
 requests-mock = "*"
+responses = "*"
 types-requests = "*"
 typing-extensions = "*"
 
 
 [tool.poetry.group.dev.dependencies]
+black = "^23.12.1"
 mypy = "*"
 ruff = "^0.1.13"
-black = "^23.12.1"
 
 [tool.ruff]
 line-length = 120

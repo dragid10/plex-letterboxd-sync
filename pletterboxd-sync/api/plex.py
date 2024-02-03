@@ -6,14 +6,12 @@ from plexapi.video import Movie
 
 
 @dataclass
-class PlexClient:
-    username: str
-    password: str
-    two_factor_auth: str = None
+class PlexWatchlistClient:
+    token: str
     plex: MyPlexAccount = field(init=False)
 
     def __post_init__(self):
-        self.plex = MyPlexAccount(self.username, self.password, code=self.two_factor_auth, remember=False)
+        self.plex = MyPlexAccount(token=self.token)
 
     def add_movie_to_watchlist(self, title: str, tmdb_id: int = None, imdb_id: str = None) -> bool:
         """ Given a film on the Letterboxd watchlist, attempt to add it to the Plex watchlist
